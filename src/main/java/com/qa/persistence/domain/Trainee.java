@@ -8,24 +8,42 @@ import javax.persistence.Id;
 @Entity
 public class Trainee {
 
-	@Id
+
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	Long traineeID;
-	String traineeName;
+	@Id
+	private Long traineeID;
+	private String traineeName;
+	private Long classroomID;
 	
 	
 	public Trainee() {
-
 	}
 
-	public Trainee(String traineename) {
-		traineeName = traineename;
-
+	public Trainee(String traineeName) {
+		this.traineeName = traineeName;
+	}
+	
+	public Long getTraineeID() {
+		return traineeID;
 	}
 
-	public String setTraineeName(String name) {
-		traineeName = name;
-		return "Name Changed";
+	public void setTraineeID(Long traineeID) {
+		this.traineeID = traineeID;
 	}
 
+	public String getTraineeName() {
+		return traineeName;
+	}
+
+	public void setTraineeName(String traineeName) {
+		this.traineeName = traineeName;
+	}
+
+	public Long getClassroomID() {
+		return classroomID;
+	}
+
+	public void setClassroomID(Long classroomID) {
+		this.classroomID = classroomID;
+	}
 }
