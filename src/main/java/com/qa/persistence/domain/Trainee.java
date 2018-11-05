@@ -8,7 +8,6 @@ import javax.persistence.Id;
 @Entity
 public class Trainee {
 
-
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
 	private Long traineeID;
@@ -19,10 +18,19 @@ public class Trainee {
 	public Trainee() {
 	}
 
+	public Trainee(Long classroomid, String traineeName) {
+		this.traineeName = traineeName;
+		this.classroomID = classroomid;
+	}
+	
 	public Trainee(String traineeName) {
 		this.traineeName = traineeName;
 	}
 	
+	public Trainee(Long classroomid) {
+		this.classroomID = classroomid;
+	}
+
 	public Long getTraineeID() {
 		return traineeID;
 	}

@@ -9,7 +9,6 @@ public class JSONUtil {
 	public JSONUtil() {
 		this.gson = new Gson();
 	}
-	
 
 	public String getJSONForObject(Object obj) {
 		return gson.toJson(obj);

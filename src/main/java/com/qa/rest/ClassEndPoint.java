@@ -50,20 +50,19 @@ public class ClassEndPoint {
 	public String deleteTrainee(@PathParam("id") Long traineeid) {
 		return service.deleteTrainee(traineeid);
 	}
-	@Path("/updatetrainer/{id}")
+	@Path("/updateTrainer/{id}")
 	@PUT
 	@Produces({ "application/json" })
 	public String updateTrainer(@PathParam("id") Long trainerid, String trainers) {
 		return service.updateTrainer(trainerid, trainers);
 	}
-	@Path("/updatetrainee/{id}")
+	@Path("/updateTrainee/{id}")
 	@PUT
 	@Produces({ "application/json" })
 	public String updateTrainee(@PathParam("id") Long traineeid, String trainees) {
 		return service.updateTrainee(traineeid, trainees);
 	}
 
-	
 	public void setService(IClassService service) {
 		this.service = service;
 	}

@@ -61,7 +61,7 @@ public class ClassService implements IClassService {
 				
 	}
 	public String updateTrainee(Long traineeid, String trainees) {
-		return connect.updateTrainer(trainees, traineeid);
+		return connect.updateTrainee(trainees, traineeid);
 				
 	}
 	

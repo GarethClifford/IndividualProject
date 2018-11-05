@@ -25,7 +25,6 @@ public class Trainer {
 //	HashMap<Long,String> traineeHash = new HashMap<>();
 	private List<Trainee> trainee;
 
-
 	public Trainer() {
 
 	}

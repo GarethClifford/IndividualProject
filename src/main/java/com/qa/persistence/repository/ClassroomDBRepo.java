@@ -52,11 +52,8 @@ public class ClassroomDBRepo implements IConnect {
 	public String updateTrainer(String trainer, Long id) {
 		Trainer newDetails = util.getObjectforJSON(trainer, Trainer.class);
 		Trainer oldDetails = em.find(Trainer.class, id);
-
 		oldDetails.setTrainer(newDetails.getTrainer());
-
 		return "{\"message\": \"Trainer sucessfully updated\"}";
-
 	}
 
 	@Override
@@ -64,11 +61,8 @@ public class ClassroomDBRepo implements IConnect {
 	public String updateTrainee(String trainee, Long id) {
 		Trainee newDetails = util.getObjectforJSON(trainee, Trainee.class);
 		Trainee oldDetails = em.find(Trainee.class, id);
-
 		oldDetails.setTraineeName(newDetails.getTraineeName());
-
 		return "{\"message\": \"Trainee sucessfully updated\"}";
-
 	}
 
 	@Override
@@ -84,7 +78,6 @@ public class ClassroomDBRepo implements IConnect {
 		em.remove(findATrainee(id));
 		return "{\"message\": \"account sucessfully removed\"}";
 	}
-
 
 	public String getAll() {
 		Query query = em.createQuery("SELECT t FROM Trainer t");
